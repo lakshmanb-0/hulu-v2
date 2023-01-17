@@ -1,14 +1,11 @@
-import { ThumbUpOffAlt } from "@mui/icons-material";
+// import { ThumbUpOffAlt } from "@mui/icons-material";
 import Image from "next/image";
-import { forwardRef } from "react";
+// import { forwardRef } from "react";
 
-const Thumbnail = forwardRef(({ result }, ref) => {
+const Thumbnail = ({ result }) => {
   const base_url = "https://image.tmdb.org/t/p/original";
   return (
-    <div
-      ref={ref}
-      className="group cursor-pointer p-2 transition duration-200 ease-in transform  sm:hover:scale-110 hover:z-50"
-    >
+    <div className="group cursor-pointer p-2 transition duration-200 ease-in transform  sm:hover:scale-110 hover:z-50">
       <Image
         src={`${base_url}${result.backdrop_path || result.poster_path} `}
         alt={result.title}
@@ -27,12 +24,11 @@ const Thumbnail = forwardRef(({ result }, ref) => {
         </h2>
         <span className="opacity-0 group-hover:opacity-100 flex items-center">
           {`${result.release_date} • ${result.vote_count} `}
-          <ThumbUpOffAlt className="ml-1 h-5" />
+          {/* <ThumbUpOffAlt className="ml-1 h-5" /> */}
         </span>
       </div>
     </div>
   );
-});
-Thumbnail.displayName = "Thumbnail";
+};
 
 export default Thumbnail;
