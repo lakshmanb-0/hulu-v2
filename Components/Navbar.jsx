@@ -4,12 +4,12 @@ import requests from "../utils/requests";
 function Navbar() {
   const router = useRouter();
   return (
-    <section className="relative">
+    <section className="relative mb-3">
       <nav className="flex whitespace-nowrap space-x-10 sm:space-x-20 text-xl sm:text-3xl overflow-x-scroll px-5 sm:px-10 scrollbar-hide py-3">
         {Object.entries(requests).map(([key, { title, url }]) => (
           <h2
             key={key}
-            onClick={() => router.push(`/?genre/${key}`)}
+            onClick={() => router.push(`/?genre=${key}`)}
             className="last:pr-5 cursor-pointer transition duration-500 transform hover:text-white hover:scale-125 active:text-red-500 select-none"
           >
             {title}
