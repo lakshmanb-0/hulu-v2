@@ -12,7 +12,7 @@ import HeaderElement from "./HeaderElement";
 function Header() {
   return (
     <header className="flex flex-col items-center justify-between sm:flex-row mx-5 my-4">
-      <section className="flex flex-grow items-center justify-evenly max-w-2xl  ">
+      <section className="flex grow items-center justify-evenly max-w-2xl">
         {/* <HeaderElement title="HOME" Icon={HomeOutlined} />
         <HeaderElement title="TRENDING" Icon={Bolt} />
         <HeaderElement title="VERIFIED" Icon={VerifiedOutlined} />

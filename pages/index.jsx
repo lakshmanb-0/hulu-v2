@@ -6,7 +6,7 @@ import requests from "../utils/requests";
 
 export default function Home({ results }) {
   return (
-    <>
+    <div>
       <Head>
         <title>Hulu</title>
         <link rel="icon" href="/huluFav.jpg" />
@@ -14,7 +14,7 @@ export default function Home({ results }) {
       <Header />
       <Navbar />
       <Results result={results} />
-    </>
+    </div>
   );
 }
 

@@ -1,7 +1,6 @@
 const API_KEY = process.env.API_KEY;
 
 const requests = {
-
   fetchTrending: {
     title: "Trending",
     url: `/trending/movie/week?api_key=${API_KEY}&language=en-US&page=1`
@@ -50,6 +49,5 @@ const requests = {
     title: 'TV Movie',
     url: `/discover/movie?api_key=${API_KEY}&with_genres=10770`,
   },
-
 };
 export default requests;
