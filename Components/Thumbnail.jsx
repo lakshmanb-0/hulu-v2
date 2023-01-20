@@ -7,7 +7,10 @@ const Thumbnail = ({ result }) => {
   return (
     <div className="group cursor-pointer p-2 transition duration-200 ease-in transform sm:hover:scale-110 hover:z-50">
       <Image
-        src={`${base_url}${result.backdrop_path || result.poster_path} `}
+        src={
+          `${base_url}${result.backdrop_path || result.poster_path}` ||
+          `${base_url}${result.poster_path}`
+        }
         alt={result.title}
         width={1080}
         height={1920}
@@ -19,7 +22,7 @@ const Thumbnail = ({ result }) => {
           title={result.title}
           className="truncate mt-1 text-2xl text-white group-hover:font-bold transition-all duration-100 ease-in-out"
         >
-          {result.title || result.original_title}
+          {result.title || result.original_name}
         </h2>
         <span className="opacity-0 group-hover:opacity-100 flex items-center">
           {`${result.release_date} • ${result.vote_count} `}
