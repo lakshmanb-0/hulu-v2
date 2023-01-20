@@ -21,7 +21,6 @@ function Header() {
         <HeaderElement title="ACCOUNT" Icon={PersonOutlined} /> */}
       </section>
       <Image
-        priority
         src="/huluWhite.Png"
         alt="logo"
         width={130}

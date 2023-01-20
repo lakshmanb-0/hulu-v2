@@ -12,7 +12,6 @@ const Thumbnail = ({ result }) => {
         width={1080}
         height={1920}
         className="rounded"
-        priority
       />
       <div className="p-2">
         <p className="truncate max-w-md">{result.overview}</p>
