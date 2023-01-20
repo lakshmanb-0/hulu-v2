@@ -1,6 +1,5 @@
-// import { ThumbUpOffAlt } from "@mui/icons-material";
+import { ThumbUpOffAlt } from "@mui/icons-material";
 import Image from "next/image";
-// import { forwardRef } from "react";
 
 const Thumbnail = ({ result }) => {
   const base_url = "https://image.tmdb.org/t/p/original";
@@ -26,7 +25,7 @@ const Thumbnail = ({ result }) => {
         </h2>
         <span className="opacity-0 group-hover:opacity-100 flex items-center">
           {`${result.release_date} • ${result.vote_count} `}
-          {/* <ThumbUpOffAlt className="ml-1 h-5" /> */}
+          <ThumbUpOffAlt className="ml-1 h-5" />
         </span>
       </div>
     </div>
